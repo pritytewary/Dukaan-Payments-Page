@@ -1,8 +1,14 @@
 import { Table, Tbody, Td, Th, Thead, Tr } from "../ui/Table";
-import { Chip } from "../ui/Chip";
+import { ButtonChip, Chip } from "../ui/Chip";
 import { Select, Option } from "../ui/Select";
 import { FaDownload } from "react-icons/fa6";
-import { AdjustmentsVerticalIcon } from "@heroicons/react/24/outline";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
+
+import {
+  AdjustmentsVerticalIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+} from "@heroicons/react/24/outline";
 
 const PaymentTable = () => {
   const tables = [
@@ -199,6 +205,44 @@ const PaymentTable = () => {
             )}
           </Tbody>
         </Table>
+        <div className="flex justify-center items-center space-x-3 p-4">
+          <ButtonChip
+            label={
+              <>
+                {" "}
+                <ChevronLeftIcon className="w-4 h-4" /> Previous
+              </>
+            }
+            isBorder
+          />
+          <ButtonChip label={1} />
+          <ButtonChip
+            label={
+              <>
+                {" "}
+                <HiOutlineDotsHorizontal />
+              </>
+            }
+          />
+          <ButtonChip label={10} isBlue={true} />
+          <ButtonChip label={11} />
+          <ButtonChip label={12} />
+          <ButtonChip label={13} />
+          <ButtonChip label={14} />
+          <ButtonChip label={15} />
+          <ButtonChip label={16} />
+          <ButtonChip label={17} />
+          <ButtonChip label={18} />
+          <ButtonChip
+            label={
+              <>
+                {" "}
+                Next <ChevronRightIcon className="w-4 h-4" />
+              </>
+            }
+            isBorder
+          />
+        </div>
       </div>
     </div>
   );

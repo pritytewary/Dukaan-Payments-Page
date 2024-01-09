@@ -16,5 +16,26 @@ const Chip = ({ label, onClick, isHighlighted = false }) => {
     </button>
   );
 };
+const ButtonChip = ({ label, onClick, isBlue, isBorder = false }) => {
+  return (
+    <button
+      className={clsx(
+        "px-5 py-4 border-2  text-sm shadow-md font-semibold space-x-2 rounded-md flex items-center",
 
-export { Chip };
+        {
+          " text-black border-gray-300 ": isBorder,
+          "bg-white text-black hover:bg-gray-300 border-gray-50": !isBorder,
+        },
+        {
+          "bg-blue-600 text-white ": isBlue,
+          "bg-white text-black hover:bg-gray-300": !isBlue,
+        }
+      )}
+      onClick={onClick}
+    >
+      {label}
+    </button>
+  );
+};
+
+export { Chip, ButtonChip };
