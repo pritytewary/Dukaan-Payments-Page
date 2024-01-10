@@ -27,7 +27,7 @@ const ButtonChip = ({ label, onClick, isBlue, isBorder = false }) => {
           "bg-white text-black hover:bg-gray-300 border-gray-50": !isBorder,
         },
         {
-          "bg-blue-700 text-white ": isBlue,
+          "bg-blue-700 text-white hover:text-black ": isBlue,
           "bg-white text-black hover:bg-gray-300": !isBlue,
         }
       )}
